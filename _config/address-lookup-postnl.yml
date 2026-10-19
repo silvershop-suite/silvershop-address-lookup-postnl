@@ -1,0 +1,27 @@
+---
+Name: silvershop-address-lookup-postnl
+After:
+  - '#silvershop-address-lookup'
+---
+SilverShop\AddressLookup\Provider\AddressLookupProviderRegistry:
+  # Register the paid PostNL provider alongside the base's free providers (and any other installed satellites).
+  # It is REGISTERED-AVAILABLE only: `by_country` and `default` are deliberately NOT set here, so the base defaults
+  # (NL->pdok, DE->openplz, BE->myparcel) and any other satellite's routing (e.g. loqate's global `default`) are
+  # left untouched. Opt in per the README:
+  #
+  #   # Carrier-aligned NL (use PostNL for the Dutch postcode + house-number lookup instead of the free gov PDOK):
+  #   SilverShop\AddressLookup\Provider\AddressLookupProviderRegistry:
+  #     by_country:
+  #       NL: postnl
+  #
+  #   # Or route specific international countries to PostNL's autocomplete:
+  #   SilverShop\AddressLookup\Provider\AddressLookupProviderRegistry:
+  #     by_country:
+  #       GB: postnl
+  #       FR: postnl
+  #
+  #   # Or prefer PostNL globally (becomes the fallback for every unmapped country):
+  #   SilverShop\AddressLookup\Provider\AddressLookupProviderRegistry:
+  #     default: postnl
+  providers:
+    postnl: '%$SilverShop\AddressLookup\PostNL\PostNLAddressProvider'

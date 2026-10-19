@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="vendor/silverstripe/cms/tests/bootstrap.php" colors="true">
+    <testsuites>
+        <testsuite name="Default">
+            <directory>tests/php</directory>
+        </testsuite>
+    </testsuites>
+    <!--
+        Self-contained test database so `vendor/bin/phpunit` runs without the caller having to export SS_* env vars.
+        Not forced, so CI (which sets these inline) and a developer overriding the DB on the command line still win.
+    -->
+    <php>
+        <env name="SS_ENVIRONMENT_TYPE" value="dev"/>
+        <env name="SS_DATABASE_CLASS" value="SQLite3Database"/>
+        <env name="SS_DATABASE_NAME" value="ss_test"/>
+        <env name="SS_SQLITE_DATABASE_PATH" value=":memory:"/>
+    </php>
+    <source>
+        <include>
+            <directory suffix=".php">src</directory>
+        </include>
+    </source>
+</phpunit>

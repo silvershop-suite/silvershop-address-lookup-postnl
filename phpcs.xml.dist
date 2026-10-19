@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<ruleset name="silvershop-address-lookup-postnl">
+    <description>PHP_CodeSniffer configuration</description>
+
+    <file>src</file>
+    <file>tests</file>
+
+    <exclude-pattern>*/vendor/*</exclude-pattern>
+
+    <arg name="extensions" value="php"/>
+    <arg name="colors"/>
+    <arg value="p"/>
+
+    <!-- Line-length (and other) warnings are reported but don't fail the build; real errors still do. -->
+    <config name="ignore_warnings_on_exit" value="1"/>
+
+    <rule ref="PSR12">
+        <!-- SilverStripe template/contract methods are PascalCase by convention. -->
+        <exclude name="PSR1.Methods.CamelCapsMethodName"/>
+    </rule>
+</ruleset>
