@@ -1,6 +1,6 @@
-# silvershop/address-lookup-postnl
+# silvershop-suite/address-lookup-postnl
 
-A **satellite provider** for [`silvershop/address-lookup`](https://github.com/silvershop/silvershop-address-lookup)
+A **satellite provider** for [`silvershop-suite/address-lookup`](https://github.com/silvershop/silvershop-address-lookup)
 (CMS 6) that resolves addresses through **PostNL's Adrescheck Autocomplete (ACI) API** — the carrier-aligned option
 for shops that already ship with PostNL (or MyParcel).
 
@@ -38,7 +38,7 @@ to the manual form.
 ## Installation
 
 ```bash
-composer require silvershop/address-lookup-postnl
+composer require silvershop-suite/address-lookup-postnl
 ```
 
 Then run `dev/build?flush=all`.
@@ -120,12 +120,12 @@ empty answer on any miss or fault, so a slow or failing address API never blocks
 - PHP ^8.3
 - silverstripe/framework ^6
 - silvershop/core ^6
-- silvershop/address-lookup ^1
+- silvershop-suite/address-lookup ^1
 - A PostNL API key (`SS_POSTNL_API_KEY`)
 
 ## Pairs well with
 
-- [`silvershop/shipping-myparcel`](https://github.com/silvershop) — a shop shipping NL/BE parcels via PostNL/MyParcel
+- [`silvershop-suite/shipping-myparcel`](https://github.com/silvershop) — a shop shipping NL/BE parcels via PostNL/MyParcel
   gets carrier-aligned address data from the same courier.
 
 ## License

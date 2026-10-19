@@ -1,6 +1,6 @@
 {
-    "name": "silvershop/address-lookup-postnl",
-    "description": "PostNL Adrescheck provider for silvershop/address-lookup (CMS 6): a satellite connector that resolves NL addresses structurally (postcode + house number -> street + city via PostNL's Dutch addresscheck) and every other country via free-text international autocomplete, over PostNL's unified Adrescheck Autocomplete (ACI) API. Authenticates with an `apikey` header (SS_POSTNL_API_KEY) and is inert without a key. Registers the `postnl` provider; carrier-aligned for shops shipping with PostNL/MyParcel.",
+    "name": "silvershop-suite/address-lookup-postnl",
+    "description": "PostNL Adrescheck provider for silvershop-suite/address-lookup (CMS 6): a satellite connector that resolves NL addresses structurally (postcode + house number -> street + city via PostNL's Dutch addresscheck) and every other country via free-text international autocomplete, over PostNL's unified Adrescheck Autocomplete (ACI) API. Authenticates with an `apikey` header (SS_POSTNL_API_KEY) and is inert without a key. Registers the `postnl` provider; carrier-aligned for shops shipping with PostNL/MyParcel.",
     "type": "silverstripe-vendormodule",
     "license": "BSD-3-Clause",
     "keywords": ["silverstripe", "silvershop", "address", "autocomplete", "postcode", "checkout", "postnl", "adrescheck", "netherlands", "international"],
@@ -13,7 +13,7 @@
         "php": "^8.3",
         "silverstripe/framework": "^6.0",
         "silvershop/core": "^6",
-        "silvershop/address-lookup": "^1"
+        "silvershop-suite/address-lookup": "^1"
     },
     "require-dev": {
         "cambis/silverstan": "^2.1",
@@ -22,7 +22,7 @@
         "squizlabs/php_codesniffer": "^3.0"
     },
     "suggest": {
-        "silvershop/shipping-myparcel": "Pairs well: a shop shipping NL/BE parcels via PostNL/MyParcel gets carrier-aligned address data from the same courier."
+        "silvershop-suite/shipping-myparcel": "Pairs well: a shop shipping NL/BE parcels via PostNL/MyParcel gets carrier-aligned address data from the same courier."
     },
     "scripts": {
         "test": "vendor/bin/phpunit",
