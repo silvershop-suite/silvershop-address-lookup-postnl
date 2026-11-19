@@ -1,6 +1,6 @@
 # silvershop-suite/address-lookup-postnl
 
-A **satellite provider** for [`silvershop-suite/address-lookup`](https://github.com/silvershop/silvershop-address-lookup)
+A **satellite provider** for [`silvershop-suite/address-lookup`](https://github.com/silvershop-suite/silvershop-address-lookup)
 (CMS 6) that resolves addresses through **PostNL's Adrescheck Autocomplete (ACI) API** — the carrier-aligned option
 for shops that already ship with PostNL (or MyParcel).
 
